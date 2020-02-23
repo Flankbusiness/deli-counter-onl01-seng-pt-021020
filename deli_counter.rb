@@ -13,26 +13,15 @@ def line(katz_deli)
   end
 end
 
-def take_a_number(katz_deli, other_deli)
-  
-  
-  
-  
-  
-  puts "Welcome, Ada. You are number 1 in line."
+def take_a_number(array, person)
+  array << person
+  puts "Welcome, #{person}. You are number #{array.length} in line."
 end
 
-
-
-
-def now_serving(katz_deli)
- counter = 0
-  if katz_deli.size == 0
-   puts "There is nobody waiting to be served!"
-    else 
-     while counter < katz_deli.length do 
-      katz_deli.unshift.first
-       end
-        counter += 1
+def now_serving(array)
+  if array.size == 0
+    puts "There is nobody waiting to be served!"
+  else
+    puts "Currently serving #{array.shift}."
   end
-end
+end 
